@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import Display from "./Display";
+import "./ThemeSlider.css";
 
 export default function Calculator() {
   const [displayValue, setDisplayValue] = useState("0");
   const [previousValue, setPreviousValue] = useState(null);
   const [operator, setOperator] = useState(null);
   const [waitingForOperand, setWaitingForOperand] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  const themes = ["light", "dark", "gray"];
+
+  const handleThemeChange = (value) => {
+    const newTheme = themes[value];
+    setTheme(newTheme);
+  };
 
   const operators = {
     "+": (a, b) => a + b,
@@ -64,11 +73,21 @@ export default function Calculator() {
   };
 
   return (
-    <div className="calculator">
+    <div className={`calculator ${theme}`}>
       <div className="calc-cont">
         <div className="calc">calc</div>
-        <div className="theme">No Theme</div>
+        <div className="theme-slider">
+          <input
+            type="range"
+            min="0"
+            max={themes.length - 1}
+            value={themes.indexOf(theme)}
+            onChange={(e) => handleThemeChange(e.target.value)}
+            step="1"
+          />
+        </div>
       </div>
+
       <Display value={displayValue} />
       <div className="buttons">
         <button className="button" onClick={() => handleClick("7")}>
@@ -117,7 +136,7 @@ export default function Calculator() {
           /
         </button>
         <button className="button" onClick={() => handleClick("*")}>
-          *
+          x
         </button>
         <button className="button reset" onClick={() => handleClick("RESET")}>
           RESET

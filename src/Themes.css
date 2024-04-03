@@ -1,7 +1,7 @@
-:root {
-  --background-col: hsl(0, 0%, 93%);
-  --calculator-background-color: hsl(0, 0%, 90%);
-  --input-background-color: hsl(0, 0%, 90%);
+.calculator.light {
+  --background-col: hsl(0, 0%, 90%);
+  --calculator-background-color: hsl(0, 5%, 81%);
+  --input-background-color: hsl(0, 0%, 93%);
   --button-color: hsl(45, 7%, 89%);
   --text-color: hsl(60, 10%, 19%);
   --input-text-color: hsl(60, 10%, 19%);
@@ -19,7 +19,7 @@
   --triary-shadow-color: hsl(25, 67%, 47%);
 }
 
-[data-theme="dark"] {
+.calculator.dark {
   --background-col: hsl(268, 75%, 9%);
   --calculator-background-color: hsl(268, 71%, 12%);
   --input-background-color: hsl(268, 71%, 12%);
@@ -40,7 +40,7 @@
   --triary-shadow-color: hsl(177, 44%, 54%);
 }
 
-[data-theme="gray"] {
+.calculator.gray {
   --background-col: hsl(222, 26%, 31%);
   --calculator-background-color: hsl(223, 31%, 20%);
   --input-background-color: hsl(224, 36%, 15%);
@@ -58,5 +58,5 @@
   --secondary-hover-color: hsl(225, 42%, 61%);
   --secondary-shadow-color: hsl(224, 28%, 35%);
   --triary-hover-color: hsl(6, 82%, 53%);
-  --triary-shadow-color: hsl(177, 44%, 54%);
+  --triary-shadow-color: hsl(6, 79%, 32%);
 }

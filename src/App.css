@@ -12,7 +12,7 @@ body {
   margin-top: 50px;
 }
 
-input {
+.display > input {
   font-size: 45px;
   border: none;
   width: 315px;
