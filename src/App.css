@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
 body {
-  background-color: hsl(0, 0%, 93%);
+  background: var(--background-col);
   font-family: "League Spartan", sans-serif;
 }
 
@@ -20,6 +20,9 @@ input {
   padding: 0px 25px;
   margin: 20px 0px;
   border-radius: 10px;
+  font-weight: 700;
+  color: var(--input-text-color);
+  background-color: var(--input-background-color);
 }
 
 .calculator {
@@ -32,39 +35,45 @@ input {
   justify-content: space-between;
 }
 
+.calc-cont > * {
+  color: var(--text-color);
+}
+
 .button {
-  color: hsl(60, 10%, 19%);
+  color: var(--text-color);
+  background-color: var(--button-color);
   border: none;
-  box-shadow: 0px 2px 1px 0px hsl(0, 0%, 53%);
+  box-shadow: 0px 2px 1px 0px var(--primary-shadow-color);
   font-size: 32px;
   border-radius: 10px;
   padding: 5px 20px;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .button:hover {
-  background-color: white;
+  background-color: var(--default-hover-color);
 }
 
 .del:hover,
 .reset:hover {
-  background-color: hsl(185, 80%, 41%) !important;
-  box-shadow: 0px 2px 1px 0px hsl(184, 60%, 41%) !important;
+  background-color: var(--secondary-hover-color) !important;
+  box-shadow: 0px 2px 1px 0px var(--secondary-shadow-color) !important;
 }
 
 .equal:hover {
-  background-color: hsl(25, 91%, 46%) !important;
-  box-shadow: 0px 2px 1px 0px hsl(25, 67%, 47%) !important;
+  background-color: var(--triary-hover-color) !important;
+  box-shadow: 0px 2px 1px 0px var(--triary-shadow-color) !important;
 }
 
 .buttons {
-  background-color: hsl(0, 0%, 90%);
+  background-color: var(--calculator-background-color);
   display: grid;
   grid-template-columns: repeat(4, 75px);
   grid-template-rows: repeat(5, 55px);
   border-radius: 10px;
   grid-gap: 15px;
-  padding: 10px 10px 25px;
+  padding: 15px 10px 25px;
 }
 
 .reset {
@@ -83,15 +92,15 @@ input {
   font-size: 15px;
 }
 
-.buttons :nth-child(18) {
-  color: white;
-  background-color: hsl(25, 98%, 40%);
-  box-shadow: 0px 2px 1px 0px hsl(25, 99%, 27%);
-}
-
 .buttons :nth-child(17),
 .buttons :nth-child(4) {
-  color: white;
-  background-color: hsl(185, 42%, 37%);
-  box-shadow: 0px 2px 1px 0px hsl(185, 58%, 25%);
+  color: var(--triary-text-color);
+  background-color: var(--secondary-default-color);
+  box-shadow: 0px 2px 1px 0px var(--secondary-default-shadow);
+}
+
+.buttons :nth-child(18) {
+  color: var(--equal-text-color);
+  background-color: var(--triary-default-color);
+  box-shadow: 0px 2px 1px 0px var(--triary-default-shadow);
 }
