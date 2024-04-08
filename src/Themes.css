@@ -1,0 +1,62 @@
+.calculator.light {
+  --background-col: hsl(0, 0%, 90%);
+  --calculator-background-color: hsl(0, 5%, 81%);
+  --input-background-color: hsl(0, 0%, 93%);
+  --button-color: hsl(45, 7%, 89%);
+  --text-color: hsl(60, 10%, 19%);
+  --input-text-color: hsl(60, 10%, 19%);
+  --primary-shadow-color: hsl(0, 0%, 53%);
+  --triary-text-color: white;
+  --equal-text-color: white;
+  --secondary-default-color: hsl(185, 42%, 37%);
+  --secondary-default-shadow: hsl(185, 58%, 25%);
+  --triary-default-color: hsl(25, 91%, 46%);
+  --triary-default-shadow: hsl(25, 99%, 27%);
+  --default-hover-color: white;
+  --secondary-hover-color: hsl(185, 80%, 41%);
+  --secondary-shadow-color: hsl(184, 60%, 41%);
+  --triary-hover-color: hsl(25, 98%, 50%);
+  --triary-shadow-color: hsl(25, 67%, 47%);
+}
+
+.calculator.dark {
+  --background-col: hsl(268, 75%, 9%);
+  --calculator-background-color: hsl(268, 71%, 12%);
+  --input-background-color: hsl(268, 71%, 12%);
+  --button-color: hsl(281, 89%, 26%);
+  --text-color: hsl(52, 100%, 62%);
+  --input-text-color: hsl(52, 100%, 62%);
+  --primary-shadow-color: hsl(285, 91%, 52%);
+  --triary-text-color: white;
+  --equal-text-color: hsl(198, 20%, 13%);
+  --secondary-default-color: hsl(268, 47%, 21%);
+  --secondary-default-shadow: hsl(290, 70%, 36%);
+  --triary-default-color: hsl(176, 100%, 44%);
+  --triary-default-shadow: hsl(177, 92%, 70%);
+  --default-hover-color: hsl(281, 90%, 36%);
+  --secondary-hover-color: hsl(268, 60%, 52%);
+  --secondary-shadow-color: hsl(290, 72%, 27%);
+  --triary-hover-color: hsl(176, 95%, 49%);
+  --triary-shadow-color: hsl(177, 44%, 54%);
+}
+
+.calculator.gray {
+  --background-col: hsl(222, 26%, 31%);
+  --calculator-background-color: hsl(223, 31%, 20%);
+  --input-background-color: hsl(224, 36%, 15%);
+  --button-color: hsl(30, 25%, 89%);
+  --text-color: hsl(221, 14%, 31%);
+  --input-text-color: white;
+  --primary-shadow-color: hsl(224, 28%, 35%);
+  --triary-text-color: white;
+  --equal-text-color: white;
+  --secondary-default-color: hsl(225, 21%, 49%);
+  --secondary-default-shadow: hsl(224, 28%, 35%);
+  --triary-default-color: hsl(6, 63%, 50%);
+  --triary-default-shadow: hsl(6, 70%, 34%);
+  --default-hover-color: white;
+  --secondary-hover-color: hsl(225, 42%, 61%);
+  --secondary-shadow-color: hsl(224, 28%, 35%);
+  --triary-hover-color: hsl(6, 82%, 53%);
+  --triary-shadow-color: hsl(6, 79%, 32%);
+}
