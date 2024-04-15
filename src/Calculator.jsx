@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Display from "./Display";
+import Button from "./Button";
+import "./App.css";
 import "./ThemeSlider.css";
 
 export default function Calculator() {
@@ -15,6 +17,8 @@ export default function Calculator() {
     const newTheme = themes[value];
     setTheme(newTheme);
   };
+
+  const numb = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0"];
 
   const operators = {
     "+": (a, b) => a + b,
@@ -90,60 +94,54 @@ export default function Calculator() {
 
       <Display value={displayValue} />
       <div className="buttons">
-        <button className="button" onClick={() => handleClick("7")}>
-          7
-        </button>
-        <button className="button" onClick={() => handleClick("8")}>
-          8
-        </button>
-        <button className="button" onClick={() => handleClick("9")}>
-          9
-        </button>
-        <button className="button del" onClick={() => handleClick("DEL")}>
-          DEL
-        </button>
-        <button className="button" onClick={() => handleClick("4")}>
-          4
-        </button>
-        <button className="button" onClick={() => handleClick("5")}>
-          5
-        </button>
-        <button className="button" onClick={() => handleClick("6")}>
-          6
-        </button>
-        <button className="button" onClick={() => handleClick("+")}>
-          +
-        </button>
-        <button className="button" onClick={() => handleClick("1")}>
-          1
-        </button>
-        <button className="button" onClick={() => handleClick("2")}>
-          2
-        </button>
-        <button className="button" onClick={() => handleClick("3")}>
-          3
-        </button>
-        <button className="button" onClick={() => handleClick("-")}>
-          -
-        </button>
-        <button className="button" onClick={() => handleClick(".")}>
-          .
-        </button>
-        <button className="button" onClick={() => handleClick("0")}>
-          0
-        </button>
-        <button className="button" onClick={() => handleClick("/")}>
-          /
-        </button>
-        <button className="button" onClick={() => handleClick("*")}>
-          x
-        </button>
-        <button className="button reset" onClick={() => handleClick("RESET")}>
-          RESET
-        </button>
-        <button className="button equal" onClick={() => handleClick("=")}>
-          =
-        </button>
+        {numb.map((num) => (
+          <Button
+            key={num}
+            value={num}
+            onClick={() => handleClick(num)}
+            className="button"
+          />
+        ))}
+        <Button
+          value="DEL"
+          onClick={() => handleClick("DEL")}
+          className="button del"
+        />
+        <Button
+          value="+"
+          onClick={() => handleClick("+")}
+          className="button plus"
+        />
+        <Button
+          value="-"
+          onClick={() => handleClick("-")}
+          className="button minus"
+        />
+        <Button
+          value="."
+          onClick={() => handleClick(".")}
+          className="button coma"
+        />
+        <Button
+          value="*"
+          onClick={() => handleClick("*")}
+          className="button times"
+        />
+        <Button
+          value="/"
+          onClick={() => handleClick("/")}
+          className="button divide"
+        />
+        <Button
+          value="RESET"
+          onClick={() => handleClick("RESET")}
+          className="button reset"
+        />
+        <Button
+          value="="
+          onClick={() => handleClick("=")}
+          className="button equal"
+        />
       </div>
     </div>
   );

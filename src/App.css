@@ -86,6 +86,30 @@ body {
   grid-column: 3 / 5;
 }
 
+.del {
+  grid-row: 1/2;
+  grid-column: 4/5;
+}
+
+.plus {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+
+.minus {
+  grid-row: 3/4;
+  grid-column: 4/5;
+}
+
+.coma {
+  grid-row: 4/5;
+}
+
+.times {
+  grid-row: 4/5;
+  grid-column: 4/5;
+}
+
 .del,
 .reset,
 .equal {
@@ -93,7 +117,7 @@ body {
 }
 
 .buttons :nth-child(17),
-.buttons :nth-child(4) {
+.buttons :nth-child(11) {
   color: var(--triary-text-color);
   background-color: var(--secondary-default-color);
   box-shadow: 0px 2px 1px 0px var(--secondary-default-shadow);

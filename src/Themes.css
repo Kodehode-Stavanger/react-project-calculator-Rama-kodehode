@@ -1,5 +1,5 @@
 .calculator.light {
-  --background-col: hsl(0, 0%, 90%);
+  --background-col: hsl(0, 0%, 90%) !important;
   --calculator-background-color: hsl(0, 5%, 81%);
   --input-background-color: hsl(0, 0%, 93%);
   --button-color: hsl(45, 7%, 89%);
@@ -20,7 +20,7 @@
 }
 
 .calculator.dark {
-  --background-col: hsl(268, 75%, 9%);
+  --background-col: hsl(268, 75%, 9%) !important;
   --calculator-background-color: hsl(268, 71%, 12%);
   --input-background-color: hsl(268, 71%, 12%);
   --button-color: hsl(281, 89%, 26%);
@@ -41,7 +41,7 @@
 }
 
 .calculator.gray {
-  --background-col: hsl(222, 26%, 31%);
+  --background-col: hsl(222, 26%, 31%) !important;
   --calculator-background-color: hsl(223, 31%, 20%);
   --input-background-color: hsl(224, 36%, 15%);
   --button-color: hsl(30, 25%, 89%);
